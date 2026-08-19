@@ -1,0 +1,13 @@
+yes you can push also.
+
+---
+
+I am experimenting with entire.io thats why I asked about my name, because I thought as a test I could get a colleague to do entire --resume and try to fitch that information out. Anyways, I need to understand this abit more. I thought the way entire works is that it pushes to an entire branch everytime you git push, but at github I can only see the main branch for this repo?
+
+---
+
+Okay I understand that now. Anyway, if I write entire checkpoint list in cli, I get the one I am refering to with the ID "01M0CGR58XRGBBTCJKXP4WXGWP", how does that translate to a teammate being able to "claude code resume" this?
+
+---
+
+Sure go ahead and do something arbirary on a feature branch and push the branch. Then I will after that manually "git checkout main ; entire session resume entire-resume-test", unless I missunderstood?
