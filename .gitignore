@@ -1,0 +1,10 @@
+# Editor / OS cruft
+.vs/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+
+# PowerShell / local scratch
+*.log
+scratch/
