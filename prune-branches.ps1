@@ -274,6 +274,9 @@ function Find-GitRepos {
 
 function Get-DefaultBranch {
     param([string]$Repo)
+    # origin/HEAD is the authoritative answer, but it is only set by `git clone` (or a manual
+    # `git remote set-head`) — so clones made before the server renamed its default, and repos
+    # added as a bare remote, won't have it. Fall back to guessing from well-known names.
     $r = Invoke-Git $Repo @('symbolic-ref', '--short', 'refs/remotes/origin/HEAD')
     if ($r.Code -eq 0 -and $r.Output.Count -gt 0 -and $r.Output[0]) {
         return ($r.Output[0] -replace '^origin/', '')
